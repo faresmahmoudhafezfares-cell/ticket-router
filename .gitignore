@@ -1,0 +1,7 @@
+models/
+logs/
+__pycache__/
+*.pyc
+.venv/
+models.zip
+teacher.zip

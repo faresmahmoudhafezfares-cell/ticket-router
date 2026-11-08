@@ -1,0 +1,201 @@
+text,intent
+my dishwasher is not draining the water,dishwasher_issue
+the dishwasher leaves standing water at the bottom after every cycle,dishwasher_issue
+dishes come out dirty from my dishwasher model DW-6534,dishwasher_issue
+my dish washer makes a loud grinding noise,dishwasher_issue
+the dishwasher won't start when i press the button,dishwasher_issue
+there is a leak under my dishwasher,dishwasher_issue
+my dishwasher shows error code E24,dishwasher_issue
+the dishwasher door doesn't close properly anymore,dishwasher_issue
+glasses come out cloudy from the dishwasher,dishwasher_issue
+dishwasher stops in the middle of the program,dishwasher_issue
+the soap dispenser in my dishwasher doesn't open,dishwasher_issue
+my dishwasher smells really bad,dishwasher_issue
+dishwasher is not drying the dishes,dishwasher_issue
+water is not coming into the dishwasher,dishwasher_issue
+my new dishwasher keeps beeping,dishwasher_issue
+the dishwasher won't drain after the wash,dishwasher_issue
+help my dishwasher is flooding the kitchen,dishwasher_issue
+the lower spray arm of the dishwasher doesn't spin,dishwasher_issue
+dishwasher DW-4410 display is blank,dishwasher_issue
+why does my dishwasher take four hours,dishwasher_issue
+my dishwasher trips the circuit breaker,dishwasher_issue
+food bits stay on plates after the dishwasher finishes,dishwasher_issue
+the dishwasher salt light is always on,dishwasher_issue
+my dishwasher has white residue on everything,dishwasher_issue
+my washing machine won't spin,washer_issue
+the washing machine is shaking and moving across the floor,washer_issue
+washer is leaking water from the front door,washer_issue
+my washing machine door is locked and won't open,washer_issue
+the washer doesn't drain and clothes are soaking wet,washer_issue
+washing machine WM-8120 shows error F05,washer_issue
+my dryer is not heating up,washer_issue
+the clothes are still wet after the dryer cycle,washer_issue
+my washing machine makes a banging noise during spin,washer_issue
+washer stopped mid cycle and won't continue,washer_issue
+the washing machine smells like mold,washer_issue
+my washer won't fill with water,washer_issue
+detergent stays in the drawer of the washing machine,washer_issue
+the tumble dryer is making a squeaking sound,washer_issue
+washing machine won't turn on at all,washer_issue
+my washer is tearing my clothes,washer_issue
+the washing machine drum doesn't turn,washer_issue
+my dryer stops after a few minutes,washer_issue
+washing machine is not rinsing properly,washer_issue
+the washer display shows a key symbol and nothing works,washer_issue
+water is left in the drum of my washing machine,washer_issue
+my washer dryer combo takes forever,washer_issue
+the door seal on my washing machine is torn,washer_issue
+washing machine filter is blocked how do i clean it,washer_issue
+my fridge is not cooling,fridge_issue
+the refrigerator is making a humming noise all night,fridge_issue
+there is water leaking under my fridge,fridge_issue
+my freezer is building up a lot of ice,fridge_issue
+the fridge light doesn't turn on,fridge_issue
+refrigerator RF-2290 is too warm inside,fridge_issue
+my freezer is not freezing the food,fridge_issue
+the ice maker in my fridge stopped working,fridge_issue
+the fridge door doesn't seal anymore,fridge_issue
+my refrigerator keeps clicking on and off,fridge_issue
+food is freezing in the fridge section,fridge_issue
+the water dispenser on my fridge is not working,fridge_issue
+my fridge alarm keeps beeping,fridge_issue
+the refrigerator smells bad even after cleaning,fridge_issue
+there is condensation inside my fridge,fridge_issue
+fridge compressor is very loud,fridge_issue
+my new refrigerator display shows E1,fridge_issue
+the freezer drawer is stuck with ice,fridge_issue
+my fridge stopped working after a power cut,fridge_issue
+the back wall of my fridge is frozen,fridge_issue
+fridge temperature won't go below 10 degrees,fridge_issue
+the refrigerator fan is rattling,fridge_issue
+my fridge feels hot on the sides,fridge_issue
+the vegetable drawer in the fridge is full of water,fridge_issue
+my oven is not heating up,oven_issue
+the oven temperature is way off,oven_issue
+oven door glass cracked,oven_issue
+my microwave sparks when i turn it on,oven_issue
+the microwave runs but doesn't heat the food,oven_issue
+oven OV-5501 shows error code F3,oven_issue
+my oven fan is making a loud noise,oven_issue
+the cooktop burner won't ignite,oven_issue
+the induction hob turns off by itself,oven_issue
+my oven light doesn't work,oven_issue
+the oven clock keeps flashing and the oven won't start,oven_issue
+microwave turntable doesn't spin,oven_issue
+my oven trips the electricity,oven_issue
+the self cleaning function of my oven is stuck,oven_issue
+the oven door won't unlock after cleaning,oven_issue
+my hob shows an h symbol and won't heat,oven_issue
+the grill element in my oven is not working,oven_issue
+microwave buttons don't respond,oven_issue
+my oven smells like burning plastic,oven_issue
+the oven takes forever to preheat,oven_issue
+the oven knob broke off,oven_issue
+my microwave makes a buzzing noise,oven_issue
+the top heating element of the oven glows unevenly,oven_issue
+my stove gas smell is strong when it's off,oven_issue
+is my dishwasher still under warranty,warranty_claim
+i want to file a warranty claim for my washing machine,warranty_claim
+how long is the warranty on your refrigerators,warranty_claim
+can i extend the warranty on my oven,warranty_claim
+i need to book a technician visit under warranty,warranty_claim
+does the warranty cover the broken door of my fridge,warranty_claim
+my appliance broke after six months will you replace it,warranty_claim
+how do i register my new dishwasher for warranty,warranty_claim
+i lost my receipt can i still use the warranty,warranty_claim
+what does the warranty on model WM-8120 include,warranty_claim
+i want a refund for my faulty microwave,warranty_claim
+please send a repair person for my washer under guarantee,warranty_claim
+is the repair free if my fridge is two years old,warranty_claim
+how do i check the warranty status of my appliance,warranty_claim
+can i return the oven i bought last week,warranty_claim
+the technician didn't show up for my warranty repair,warranty_claim
+i want to replace my defective dishwasher,warranty_claim
+does the warranty include spare parts,warranty_claim
+what is the guarantee period for a dryer,warranty_claim
+my warranty repair request number is 48213 what's the status,warranty_claim
+can i transfer the warranty to the new owner,warranty_claim
+how much does a repair cost after the warranty ends,warranty_claim
+i need a warranty certificate for my fridge,warranty_claim
+will the warranty cover water damage from my washing machine,warranty_claim
+dishwasher not cleaning properly anymore,dishwasher_issue
+there's a puddle of water in front of my dishwasher every morning,dishwasher_issue
+why is my dishwasher so noisy all of a sudden,dishwasher_issue
+the dishwasher program light keeps blinking,dishwasher_issue
+my built in dishwasher won't turn on,dishwasher_issue
+the cutlery basket in the dishwasher broke,dishwasher_issue
+dishwasher keeps filling with water and won't stop,dishwasher_issue
+my plates are still greasy after a full dishwasher cycle,dishwasher_issue
+the rinse aid light stays on in my dishwasher,dishwasher_issue
+dishwasher door spring broke and the door falls open,dishwasher_issue
+my dishwasher hums but nothing happens,dishwasher_issue
+the dishwasher drain pump is making a weird noise,dishwasher_issue
+can someone fix my dishwasher it stopped working,dishwasher_issue
+there is a burning smell coming from the dishwasher,dishwasher_issue
+my dishwasher detergent tablet doesn't dissolve,dishwasher_issue
+the top rack of my dishwasher won't slide out,dishwasher_issue
+my washing machine keeps showing an unbalanced load error,washer_issue
+the washer won't start even though the door is closed,washer_issue
+my clothes come out of the washing machine smelling bad,washer_issue
+the washing machine overflows with soap foam,washer_issue
+dryer takes three cycles to dry a load,washer_issue
+washing machine stuck on the rinse cycle,washer_issue
+my front loader is leaking from the bottom,washer_issue
+the washer makes a loud whistling sound when filling,washer_issue
+my washing machine timer is stuck at one minute,washer_issue
+the dryer drum won't turn,washer_issue
+washer won't drain the water out,washer_issue
+my washing machine leaves black marks on clothes,washer_issue
+dryer shuts off and says the filter is full,washer_issue
+the washing machine is vibrating so much it walks,washer_issue
+can i get a technician for my broken washer,washer_issue
+my washer drawer is full of water after washing,washer_issue
+my fridge is making a clicking sound and not cooling,fridge_issue
+there is ice on the freezer floor,fridge_issue
+my refrigerator stopped making ice,fridge_issue
+the fridge is running constantly and never stops,fridge_issue
+milk goes bad quickly because my fridge is not cold enough,fridge_issue
+my refrigerator door handle broke,fridge_issue
+the fridge is leaking water inside onto the shelves,fridge_issue
+freezer temperature alarm goes off every hour,fridge_issue
+my side by side fridge is making a gurgling noise,fridge_issue
+refrigerator display is blank and the fridge is warm,fridge_issue
+the freezer door won't close because of ice,fridge_issue
+my fridge freezer is not cold at all,fridge_issue
+the water filter light on my fridge won't reset,fridge_issue
+my refrigerator smells like something is burning,fridge_issue
+the fridge is too cold and freezes the vegetables,fridge_issue
+can you send someone to repair my refrigerator,fridge_issue
+my oven doesn't get hot enough to bake,oven_issue
+the oven door won't close fully,oven_issue
+my microwave stopped working suddenly,oven_issue
+oven heats from the bottom only,oven_issue
+the oven fan doesn't turn on,oven_issue
+the burner on my gas stove keeps clicking,oven_issue
+my induction cooktop shows error e2,oven_issue
+the microwave door doesn't open,oven_issue
+my oven shuts off in the middle of cooking,oven_issue
+the oven timer beeps and won't stop,oven_issue
+my built in oven display went dark,oven_issue
+the microwave light stays on all the time,oven_issue
+my oven is smoking even when empty,oven_issue
+the hob glass top cracked,oven_issue
+can i get my oven repaired this week,oven_issue
+the oven thermostat seems broken,oven_issue
+is my washing machine covered by the warranty,warranty_claim
+i want to claim the guarantee on my broken fridge,warranty_claim
+how do i get a free repair under warranty,warranty_claim
+my oven is still under guarantee can you fix it for free,warranty_claim
+what documents do i need for a warranty claim,warranty_claim
+can i buy an extended warranty for my dishwasher,warranty_claim
+when does my appliance warranty expire,warranty_claim
+i want to exchange my faulty dryer,warranty_claim
+the warranty repair didn't fix the problem,warranty_claim
+i want my money back for this broken washer,warranty_claim
+can i get a replacement unit under warranty,warranty_claim
+how do i start a return for a damaged appliance,warranty_claim
+does the guarantee cover a cracked cooktop,warranty_claim
+my warranty claim was rejected why,warranty_claim
+i need proof of warranty for my insurance,warranty_claim
+is installation damage covered by the warranty,warranty_claim
