@@ -18,7 +18,7 @@ cd REPO
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python download_models.py          # trained models (from the GitHub Release, ~MODELS_SIZE)
+python download_models.py          # trained models (from the GitHub Release, ~450 MB)
 python app.py                      # then open http://127.0.0.1:7860
 ```
 
@@ -57,7 +57,18 @@ ELIZA-style regex replies for small talk.
 
 ## Results
 
-RESULTS_TABLE
+Test set: 5550 messages (4550 in-scope, 1000 out-of-scope). Hardware: Intel(R) Xeon(R) Processor @ 2.10GHz, 2 logical CPU cores, CPU only, PyTorch 2.15.0+cu132, Linux. Latency = one message incl. preprocessing, mean of 200 runs.
+
+| Model | Precision | In-scope accuracy | OOS recall | Routing accuracy | Size (MB) | Latency (ms) |
+|---|---|---|---|---|---|---|
+| 1 · tf-idf + Logistic Regression | FP64 | 79.2% | 90.9% | 82.7% | 40.4 | 0.6 |
+| 2 · word2vec + Feedforward NN | FP32 | 79.2% | 81.6% | 81.2% | 2.8 | 0.1 |
+| 3 · RoBERTa-base (fine-tuned) | FP32 | 91.6% | 88.6% | 91.6% | 502.7 | 51.6 |
+| 3b · RoBERTa-base INT8 | INT8 | 90.3% | 90.5% | 90.8% | 245.8 | 21.0 |
+| 4a · Distilled RoBERTa (4 layers) | FP32 | 87.6% | 90.9% | 88.7% | 275.8 | 18.8 |
+| 4 · Distilled RoBERTa INT8 (deployed) | INT8 | 87.1% | 91.6% | 88.4% | 188.8 | 5.9 |
+
+The app runs model 4 (distilled RoBERTa, INT8). Thresholds for "send to a human agent" were tuned on the validation set (`models/thresholds.json`).
 
 ## Project layout
 
@@ -69,7 +80,7 @@ router/preprocess.py    regex normalization, model codes, edit distance
 router/smalltalk.py     ELIZA-style rules
 router/teams.py         intent -> team mapping
 router/models.py        common interface for the models, INT8 loading
-data/                   CLINC150 + 120 appliance examples
+data/                   CLINC150 + 200 appliance examples
 results/                results table and error lists
 ```
 
@@ -78,11 +89,14 @@ results/                results table and error lists
 * **CLINC150** (Larson et al., 2019, "An Evaluation Dataset for Intent Classification and
   Out-of-Scope Prediction", EMNLP) — 150 intents in 10 domains + out-of-scope messages.
   <https://github.com/clinc/oos-eval> (`data_full.json`, CC BY 3.0).
-* **Appliance examples** — 120 messages for 5 home-appliance intents written for this project
-  (`data/appliance_examples.csv`), split 14 / 4 / 6 per intent into train / validation / test.
-* **Pretrained model** — RoBERTa-base (Liu et al., 2019).
+* **Appliance examples** — 200 messages for 5 home-appliance intents written for this project
+  (`data/appliance_examples.csv`), split 26 / 4 / 10 per intent into train / validation / test;
+  the training messages are repeated 4× so each appliance intent has ~100 training rows, like CLINC.
+* **Pretrained model** — RoBERTa-base (Liu et al., 2019). The weights used here were taken from the
+  RoBERTa-base encoder inside spaCy's `en_core_web_trf` 3.8.0 package (MIT) and converted with
+  `tools/roberta_from_spacy.py`; `--base roberta-base` (Hugging Face Hub) works too.
 
 ## AI usage
 
 Claude (Anthropic) was used to help write and debug the code, draft the appliance example
-messages, and draft the slides.
+messages, and draft the slides and demo script.
