@@ -1,7 +1,7 @@
 """Download the trained model files (they are too big to keep in the Git repository).
 
 Usage:  python download_models.py            (deployed + small models, needed for the app)
-        python download_models.py --teacher  (also the big 12-layer RoBERTa teacher)
+        python download_models.py --teacher  (also teacher.zip, if it is attached to the release)
 """
 import argparse
 import re

@@ -18,13 +18,15 @@ cd ticket-router
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python download_models.py          # trained models (from the GitHub Release, ~450 MB)
+python download_models.py          # trained models from the GitHub Release (~200 MB)
 python app.py                      # then open http://127.0.0.1:7860
 ```
 
 **Single run command:** `python app.py`
 
-To also show the big 12-layer RoBERTa teacher in the app, run `python download_models.py --teacher`.
+`models.zip` holds the deployed model (4, INT8) and models 1 and 2. The larger FP32 / 12-layer
+models (3, 3b, 4a; ~1 GB) are not attached to keep the download small: the app and `evaluate.py`
+skip any model that is not present, and the training scripts below recreate them.
 
 ## Reproduce the results table
 
