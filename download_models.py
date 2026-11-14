@@ -13,7 +13,7 @@ from pathlib import Path
 
 # The model files are attached to the "v1.0" GitHub Release of this repository.
 # The repository address is read from `git remote` (or set REPO below by hand).
-REPO = "OWNER/REPO"
+REPO = "faresmahmoudhafezfares-cell/ticket-router"
 
 
 def repo_slug():

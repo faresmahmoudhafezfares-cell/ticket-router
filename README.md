@@ -13,8 +13,8 @@ the quantized Transformer.
 Python 3.11–3.13.
 
 ```bash
-git clone https://github.com/OWNER/REPO.git
-cd REPO
+git clone https://github.com/faresmahmoudhafezfares-cell/ticket-router.git
+cd ticket-router
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
