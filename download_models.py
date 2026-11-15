@@ -2,10 +2,10 @@
 they are attached to the GitHub Release "v1.1" of this repository.
 
 Usage:
-  python download_models.py         the four models of the ladder, needed by the app (~540 MB):
+  python download_models.py         the four models of the ladder, needed by the app (~530 MB in two files):
                                     tf-idf + LR, word2vec + FFN, RoBERTa-base FP32, distilled RoBERTa INT8
   python download_models.py --all   also the two extra rows of the results table:
-                                    4a distilled RoBERTa FP32 (downloaded, ~245 MB)
+                                    4a distilled RoBERTa FP32 (downloaded, ~240 MB)
                                     3b RoBERTa-base INT8 (built locally by quantizing model 3)
 """
 import argparse
@@ -53,7 +53,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--all", action="store_true", help="also get the extra models 3b and 4a")
 args = ap.parse_args()
 base = f"https://github.com/{repo_slug()}/releases/download/{TAG}"
-fetch(f"{base}/ticket-router-models.zip", "ticket-router-models.zip")
+fetch(f"{base}/ticket-router-models-1.zip", "ticket-router-models-1.zip")   # models 1, 2 and 4
+fetch(f"{base}/ticket-router-models-2.zip", "ticket-router-models-2.zip")   # model 3 (RoBERTa-base FP32)
 if args.all:
     fetch(f"{base}/ticket-router-extras.zip", "ticket-router-extras.zip")
     if not Path("models/roberta_teacher_int8").exists():

@@ -3,5 +3,4 @@ logs/
 __pycache__/
 *.pyc
 .venv/
-ticket-router-models.zip
-ticket-router-extras.zip
+ticket-router-*.zip

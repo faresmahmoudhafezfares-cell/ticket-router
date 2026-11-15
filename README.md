@@ -20,7 +20,7 @@ cd ticket-router
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python download_models.py          # the four trained models, ~540 MB, from the GitHub Release
+python download_models.py          # the four trained models, ~530 MB, from the GitHub Release
 python app.py                      # opens http://127.0.0.1:7860
 ```
 
