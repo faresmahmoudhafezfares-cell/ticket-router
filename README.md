@@ -27,7 +27,7 @@ python app.py                      # opens http://127.0.0.1:7860
 **Single run command:** `python app.py`
 
 The trained weights are not in the repository. They are attached to the
-[v1.1 release](https://github.com/faresmahmoudhafezfares-cell/ticket-router/releases/tag/v1.1)
+[v1.1 release](https://github.com/faresmahmoudhafezfares-cell/ticket-router/releases/tag/v1.1) (the largest one is split into two parts to stay under upload limits)
 and `download_models.py` unpacks them into `models/`.
 
 ## What the app shows

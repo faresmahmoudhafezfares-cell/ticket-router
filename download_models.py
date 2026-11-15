@@ -2,13 +2,14 @@
 they are attached to the GitHub Release "v1.1" of this repository.
 
 Usage:
-  python download_models.py         the four models of the ladder, needed by the app (~530 MB in two files):
+  python download_models.py         the four models of the ladder, needed by the app (~530 MB):
                                     tf-idf + LR, word2vec + FFN, RoBERTa-base FP32, distilled RoBERTa INT8
   python download_models.py --all   also the two extra rows of the results table:
                                     4a distilled RoBERTa FP32 (downloaded, ~240 MB)
                                     3b RoBERTa-base INT8 (built locally by quantizing model 3)
 """
 import argparse
+import os
 import re
 import shutil
 import subprocess
@@ -34,29 +35,37 @@ def repo_slug():
     return REPO
 
 
-def fetch(url, name):
-    print(f"downloading {name} ... (this can take a few minutes)")
-    tmp = Path(name)
-    try:
-        with urllib.request.urlopen(url) as r, open(tmp, "wb") as f:
-            shutil.copyfileobj(r, f)
-    except urllib.error.HTTPError as e:
-        tmp.unlink(missing_ok=True)
-        raise SystemExit(f"Could not download {url} ({e.code}). Is {name} attached to release {TAG}?")
+def fetch(base, names, zip_name):
+    """Download one zip (given as one file, or as several parts that are joined) and unpack it."""
+    tmp = Path(zip_name)
+    with open(tmp, "wb") as out:
+        for name in names:
+            print(f"downloading {name} ... (this can take a few minutes)", flush=True)
+            try:
+                with urllib.request.urlopen(f"{base}/{name}") as r:
+                    shutil.copyfileobj(r, out)
+            except urllib.error.HTTPError as e:
+                out.close()
+                tmp.unlink(missing_ok=True)
+                raise SystemExit(f"Could not download {base}/{name} ({e.code}). "
+                                 f"Is it attached to release {TAG}?")
     with zipfile.ZipFile(tmp) as z:
         z.extractall(".")
     tmp.unlink()
-    print(f"{name} unpacked into models/")
+    print(f"{zip_name} unpacked into models/")
 
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--all", action="store_true", help="also get the extra models 3b and 4a")
 args = ap.parse_args()
-base = f"https://github.com/{repo_slug()}/releases/download/{TAG}"
-fetch(f"{base}/ticket-router-models-1.zip", "ticket-router-models-1.zip")   # models 1, 2 and 4
-fetch(f"{base}/ticket-router-models-2.zip", "ticket-router-models-2.zip")   # model 3 (RoBERTa-base FP32)
+# TICKET_ROUTER_MODELS_URL can point to a mirror of the release files.
+base = os.environ.get("TICKET_ROUTER_MODELS_URL") or f"https://github.com/{repo_slug()}/releases/download/{TAG}"
+
+fetch(base, ["ticket-router-models-1.zip"], "models-1.zip")                      # models 1, 2 and 4
+fetch(base, ["ticket-router-models-2.zip.part0", "ticket-router-models-2.zip.part1"],
+      "models-2.zip")                                                           # model 3, in two parts
 if args.all:
-    fetch(f"{base}/ticket-router-extras.zip", "ticket-router-extras.zip")
+    fetch(base, ["ticket-router-extras.zip"], "extras.zip")                      # model 4a
     if not Path("models/roberta_teacher_int8").exists():
         print("building model 3b (RoBERTa-base INT8) by quantizing model 3 ...")
         from router.models import quantize_and_save
