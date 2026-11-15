@@ -53,9 +53,9 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--all", action="store_true", help="also get the extra models 3b and 4a")
 args = ap.parse_args()
 base = f"https://github.com/{repo_slug()}/releases/download/{TAG}"
-fetch(f"{base}/models.zip", "models.zip")
+fetch(f"{base}/ticket-router-models.zip", "ticket-router-models.zip")
 if args.all:
-    fetch(f"{base}/extras.zip", "extras.zip")
+    fetch(f"{base}/ticket-router-extras.zip", "ticket-router-extras.zip")
     if not Path("models/roberta_teacher_int8").exists():
         print("building model 3b (RoBERTa-base INT8) by quantizing model 3 ...")
         from router.models import quantize_and_save
