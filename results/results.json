@@ -1,5 +1,5 @@
 {
-  "hardware": "Intel(R) Xeon(R) Processor @ 2.10GHz, 2 logical CPU cores, CPU only, PyTorch 2.15.0+cu132, Linux",
+  "hardware": "Intel(R) Xeon(R) Processor @ 2.30GHz, 2 logical CPU cores, CPU only, PyTorch 2.15.0+cu132, Linux",
   "test_size": 5550,
   "latency_runs": 200,
   "rows": [
@@ -13,8 +13,8 @@
       "overall_accuracy": 0.8133333333333334,
       "routing_accuracy": 0.827027027027027,
       "size_mb": 40.365868,
-      "latency_ms_mean": 0.5828709899378737,
-      "latency_ms_median": 0.5434354998214985
+      "latency_ms_mean": 0.42764645500056986,
+      "latency_ms_median": 0.41277750000290325
     },
     {
       "model": "2 \u00b7 word2vec + Feedforward NN",
@@ -26,8 +26,8 @@
       "overall_accuracy": 0.796036036036036,
       "routing_accuracy": 0.8117117117117117,
       "size_mb": 2.839485,
-      "latency_ms_mean": 0.13113812001392944,
-      "latency_ms_median": 0.11129300037282519
+      "latency_ms_mean": 0.09613897499917812,
+      "latency_ms_median": 0.07661199998665325
     },
     {
       "model": "3 \u00b7 RoBERTa-base (fine-tuned)",
@@ -39,21 +39,21 @@
       "overall_accuracy": 0.9104504504504505,
       "routing_accuracy": 0.9163963963963964,
       "size_mb": 502.654405,
-      "latency_ms_mean": 51.61985744504818,
-      "latency_ms_median": 51.55207050029276
+      "latency_ms_mean": 46.653709864999655,
+      "latency_ms_median": 45.87475599998925
     },
     {
       "model": "3b \u00b7 RoBERTa-base INT8",
       "key": "teacher_int8",
       "precision": "INT8",
-      "threshold": 0.9,
-      "in_scope_accuracy": 0.9030769230769231,
-      "oos_recall": 0.905,
-      "overall_accuracy": 0.9034234234234234,
-      "routing_accuracy": 0.9081081081081082,
-      "size_mb": 245.837489,
-      "latency_ms_mean": 20.970174349977242,
-      "latency_ms_median": 20.041283499267593
+      "threshold": 0.92,
+      "in_scope_accuracy": 0.8887912087912088,
+      "oos_recall": 0.911,
+      "overall_accuracy": 0.8927927927927928,
+      "routing_accuracy": 0.8974774774774775,
+      "size_mb": 130.429811,
+      "latency_ms_mean": 17.922939084999143,
+      "latency_ms_median": 17.293650999988586
     },
     {
       "model": "4a \u00b7 Distilled RoBERTa (4 layers)",
@@ -65,21 +65,21 @@
       "overall_accuracy": 0.8818018018018018,
       "routing_accuracy": 0.8872072072072072,
       "size_mb": 275.827236,
-      "latency_ms_mean": 18.763533264973375,
-      "latency_ms_median": 18.110386000444123
+      "latency_ms_mean": 15.835887544995444,
+      "latency_ms_median": 15.789043500035405
     },
     {
       "model": "4 \u00b7 Distilled RoBERTa INT8 (deployed)",
       "key": "student_int8",
       "precision": "INT8",
       "threshold": 0.95,
-      "in_scope_accuracy": 0.8705494505494505,
-      "oos_recall": 0.916,
-      "overall_accuracy": 0.8787387387387388,
-      "routing_accuracy": 0.8837837837837837,
-      "size_mb": 188.80529,
-      "latency_ms_mean": 5.90081506496972,
-      "latency_ms_median": 5.7521754988556495
+      "in_scope_accuracy": 0.8687912087912087,
+      "oos_recall": 0.914,
+      "overall_accuracy": 0.876936936936937,
+      "routing_accuracy": 0.8821621621621621,
+      "size_mb": 73.397548,
+      "latency_ms_mean": 3.6610123500031477,
+      "latency_ms_median": 3.634912999984863
     }
   ]
 }

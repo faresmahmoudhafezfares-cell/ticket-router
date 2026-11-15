@@ -86,12 +86,23 @@ class TransformerModel:
         return _size_mb([self.folder])
 
 
+def _to_int8(model):
+    """Dynamic INT8 quantization of a RoBERTa classifier.
+
+    * every Linear layer: weights stored as 8-bit integers, activations quantized on the fly
+    * the word-embedding table (50,265 x 768, the biggest single tensor): each row stored
+      as 8-bit integers with its own scale and zero point
+    LayerNorm, position embeddings and biases stay in FP32 (they are tiny)."""
+    tq = torch.ao.quantization
+    spec = {torch.nn.Linear: tq.default_dynamic_qconfig,
+            "roberta.embeddings.word_embeddings": tq.float_qparams_weight_only_qconfig}
+    return tq.quantize_dynamic(model, spec)
+
+
 def quantize_and_save(src, dst):
-    """Dynamic INT8 quantization: the weights of every Linear layer are stored as 8-bit
-    integers (with one scale per tensor); activations are quantized on the fly."""
     from transformers import AutoModelForSequenceClassification, AutoTokenizer
     model = AutoModelForSequenceClassification.from_pretrained(src).eval()
-    q = torch.ao.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
+    q = _to_int8(model)
     os.makedirs(dst, exist_ok=True)
     torch.save(q.state_dict(), Path(dst) / "model_int8.pt")
     model.config.save_pretrained(dst)
@@ -105,7 +116,7 @@ def load_quantized(folder):
     from transformers import AutoConfig, AutoModelForSequenceClassification
     cfg = AutoConfig.from_pretrained(folder)
     model = AutoModelForSequenceClassification.from_config(cfg).eval()
-    q = torch.ao.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
+    q = _to_int8(model)
     q.load_state_dict(torch.load(Path(folder) / "model_int8.pt", weights_only=False))
     return q.eval()
 

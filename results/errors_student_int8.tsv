@@ -2,8 +2,8 @@ text	true	predicted
 what's the word for trees in norway	translate	oos
 what's the french word you use for potato	translate	oos
 what would the word for grass be in finland	translate	oos
-how would i say what is your name if i were french	translate	oos
 english to spanish for dog	translate	oos
+what is dog in spanish	translate	oos
 dog in spanish	translate	oos
 how much money can i transfer today	transfer	oos
 add funds to the retirement account from the pnc account only	transfer	oos
@@ -25,20 +25,20 @@ are there any travel bulletins about haiti	travel_alert	oos
 does the state department say anything about traveling to haiti	travel_alert	oos
 how is a vacation request done	pto_request	oos
 is it ok if i use some of my pto on may 24th to may 29th	pto_request	oos
+can i purchase a vacation using this	pto_request	oos
 vacation request information	pto_request	oos
 vacation request please	pto_request	oos
 how can i contribute to my credit score	improve_credit_score	oos
 how can i up my credit score	improve_credit_score	credit_score
-how can i rehabilitate my poor credit score	improve_credit_score	oos
 it is damaging to my credit score if i miss one credit card payment	improve_credit_score	oos
 i have a revolving store card and defaulted so will my fico score be affected	improve_credit_score	oos
 will my fico score decrease if i increase my student loan debt	improve_credit_score	oos
+can i hurt my credit rating if i open several credit cards in a short time frame	improve_credit_score	oos
 will only having five late payments really make my credit bad	improve_credit_score	oos
 what is some trivia about the weather	fun_fact	oos
 give me a amusing fact about wolf	fun_fact	oos
 please speak in tagalog	change_language	oos
 i'd like to use you using russian	change_language	oos
-do you speak english	change_language	oos
 i want to talk english	change_language	oos
 can you tell me the date of my last check	payday	oos
 when's pay day for me	payday	oos
@@ -63,6 +63,8 @@ tell time for another city dallas	time	oos
 what is the time is central time zone	time	oos
 when is boarding scheduled	flight_status	oos
 call me bob from now on	change_user_name	oos
+could you call me a different name	change_user_name	oos
+could you call me a different name please	change_user_name	oos
 could you call me by a different name please	change_user_name	oos
 ai my name is deb please use my name when you talk to me	change_user_name	oos
 ai answer my questions with my name first which is deb	change_user_name	oos
@@ -70,6 +72,7 @@ ai address me as deb when speaking to me	change_user_name	oos
 please go ahead and change my name	change_user_name	oos
 please switch my name	change_user_name	oos
 start calling me jake from now on	change_user_name	oos
+i want to be called timothy	change_user_name	oos
 where do you call home	where_are_you_from	oos
 are you from here or somewhere else originally	where_are_you_from	oos
 a hidden government facility	where_are_you_from	oos
@@ -79,10 +82,10 @@ the list should also have 2 loaves of bread	shopping_list_update	oos
 include asparagus on the list	shopping_list_update	oos
 i don't need eggs anymore but i do need milk	shopping_list_update	oos
 i need milk on my shopping list	shopping_list_update	oos
-what kid of subjects do you excel in	what_can_i_ask_you	oos
 what are you programmed to do for me	what_can_i_ask_you	oos
 what things do you know how to do	what_can_i_ask_you	oos
 undecided	maybe	oos
+might	maybe	oos
 not sure	maybe	oos
 not sure to be honest	maybe	oos
 that might be the case	maybe	oos
@@ -100,7 +103,9 @@ tell me whether or not i have a reservation at gramercy tavern for tad	confirm_r
 are there reservation for joe and will	confirm_reservation	oos
 is there a reservation for mark at mimis	confirm_reservation	oos
 my account at the bank needs to be frozen	freeze_account	oos
+block my bank of america immdediately	freeze_account	oos
 put a block on bank of amerian immediately	freeze_account	oos
+name the person or group that programmed you	who_made_you	oos
 what's the mileage to get the the taj mahal in atlantic city	distance	oos
 how much time is left until we get there	distance	oos
 how many minutes am i from texaco	distance	oos
@@ -116,6 +121,7 @@ can you tell me about what time i should be arriving at the airport	distance	oos
 call my name	user_name	oos
 what do i go by	user_name	oos
 what's your designation	user_name	what_is_your_name
+i want to hear my name	user_name	oos
 my name	user_name	oos
 you know me by what right now	user_name	oos
 does denver reside in the eastern timezones	timezone	oos
@@ -152,6 +158,7 @@ did i stick to my dinner budget	spending_history	oos
 what are my finances like lately	spending_history	oos
 is vacation a go	pto_request_status	oos
 how is my vacation looking	pto_request_status	oos
+any new info on my vacation	pto_request_status	oos
 when will my vacation time be confirmed	pto_request_status	oos
 when will i hear back about my days off	pto_request_status	oos
 am i okay to take those vacation days	pto_request_status	oos
@@ -161,6 +168,7 @@ what's the best way to get a mastercard	new_card	oos
 does bank of america give credit cards to people like me	new_card	oos
 is it possible for me to get a better credit card	new_card	oos
 find out if there's a new credit card that suits me	new_card	oos
+what's it take to get a mastercard	new_card	oos
 i lost all my stuff that i had packed	lost_luggage	oos
 i didn't catch that	repeat	oos
 sorry i missed that	repeat	oos
@@ -180,14 +188,13 @@ please let's do it	yes	oos
 can we please	yes	oos
 10 4	yes	calculator
 ya	yes	greeting
-yup	yes	oos
 great	yes	thank_you
 help me plan my traveling itinerary for my trip to madrid i want to see lots of sights	travel_suggestion	oos
 help me pick a new location to travel to	travel_suggestion	oos
 i am itching to travel but don't know where to go	travel_suggestion	oos
 i want to explore a new place but don't know where i should go do you have any ideas	travel_suggestion	oos
+what are some fun silly things to do in new jersey	travel_suggestion	oos
 which insurance plan to i have	insurance	oos
-i don't need grocery shopping on my todo list anymore	todo_list_update	oos
 remove grocery shopping from todo list	todo_list_update	oos
 cross off grocery shopping from todo list	todo_list_update	oos
 empty the contents of my to do list	todo_list_update	oos
@@ -197,10 +204,11 @@ you can vacuuming of my todo list	todo_list_update	oos
 what were you supposed to remind me of	reminder	oos
 did i tell you to remind me about laundry	reminder	oos
 what kinds of things are you supposed to remind me of	reminder	oos
+is grocery shopping on my reminders list	reminder	oos
 can you please remind me of the items that i made note of to not forget	reminder	oos
 can i change your talking voice	change_speed	oos
 that can't be true	no	oos
-do i have my nephew's birthday marked for november 10th	calendar	oos
+is my apr rate better than most	apr	oos
 did i set march 10th as my doctor's appointment	calendar	oos
 did i mark the mechanic's appointment on my calendar	calendar	oos
 is my meeting with frank on my calendar	calendar	oos
@@ -230,12 +238,13 @@ i will be traveling to lima alert my bank	travel_notification	oos
 i'll be travelling to russia from april 1 through april 20 and need my financial institute apprised of it	travel_notification	oos
 tell my bank's fraud department i'm going to mexico	travel_notification	report_fraud
 must call my bank about my travel plans	travel_notification	oos
+unsync yourself from my device	sync_device	oos
 i apprecaite the help from you	thank_you	oos
 i appeciate it	thank_you	oos
 thanks for the reply	thank_you	oos
 when does the jerky expire	food_last	oos
 what is the expiration date for those eg	food_last	oos
-what is the most time i can keep a burrito frozen for before it's no good to eat	food_last	oos
+milk will go bad in my fridge when	food_last	oos
 bake time for brownies	cook_time	oos
 look up recipe time for this	cook_time	oos
 how many minutes should i set an alarm for this bake	cook_time	oos
@@ -247,7 +256,6 @@ set a reminder for when the turkey is finished cooking	reminder_update	oos
 i don't want to forget to call mom	reminder_update	oos
 help me to remember to pick up stan later	reminder_update	oos
 tell me later to call bill	reminder_update	oos
-create a new reminder to study for my final exams	reminder_update	oos
 can you set a reminder alarm for me to workout	reminder_update	oos
 someone used my chase card without my authorization	report_lost_card	report_fraud
 my bank of america visa platinum was swiped from my belongings	report_lost_card	oos
@@ -256,24 +264,27 @@ i need to report that someone ran off with my td bank card earlier	report_lost_c
 lost report card need new one	report_lost_card	oos
 can i swap chili for sloppy joe mix in the recipe	ingredient_substitution	oos
 will this recipe still be good if i use milk instead of eggs	ingredient_substitution	oos
+will it be ok to sub turkey for beef	ingredient_substitution	oos
+is it okay to use applesauce instead of oil	ingredient_substitution	oos
 if i use applesauce instead of oil will that mess it up	ingredient_substitution	oos
 is it alright to switch applesauce for oil	ingredient_substitution	oos
 will it still work if i use applesauce instead of oil	ingredient_substitution	oos
 would it be ok to use butter instead of oil	ingredient_substitution	oos
 is it ok to use oil spray instead of canola oil	ingredient_substitution	oos
+i need to call my boss	make_call	oos
 get mom on the phone	make_call	oos
 i need you to phone sal	make_call	oos
 x needs to be called by me	make_call	change_user_name
 did i put grocery shopping on my todo list	todo_list	oos
 have i told you to add washing dishes to my todo list	todo_list	todo_list_update
 can you see if paying garbage bill is on my todo list for this week	todo_list	oos
+what do i need to do to get that tax form thing from my job	w2	oos
 how do i get that tax form from my employer	w2	oos
 what's the latest i can pay my cellular bill	bill_due	oos
 what's the due date for my netflix subscription	bill_due	oos
 when is my cell phone due	bill_due	oos
 when does the current billing cycle end	bill_due	oos
 is the bill due	bill_due	oos
-i need to know the next billing date of my american express card	bill_due	oos
 calorie content of dr pepper	calories	oos
 calorie check cheese burger	calories	oos
 how much is alorie intake	calories	oos
@@ -281,13 +292,11 @@ what do i do about a card that's too messed up to be properly scanned	damaged_ca
 my card became damaged when i dropped it in the parking lot and it got ran over	damaged_card	oos
 how do i replace a damaged card	damaged_card	oos
 who should i talk to about the fact that i inadvertently split my card almost in half	damaged_card	oos
-i accidentally deactivated the magnetic stripe on my visa debit card and i need to report it	damaged_card	oos
 my visa has been damaged	damaged_card	oos
 do they serve good tacos at the buffet	restaurant_reviews	oos
 my favorite beef tacos at the buffet	restaurant_reviews	oos
 they sold out of tacos at the buffet	restaurant_reviews	oos
 yum pulled pork tacos at the buffet	restaurant_reviews	oos
-what do people think of the new burger at mcdonalds	restaurant_reviews	oos
 what are people saying about chick fil a's chicken nuggets	restaurant_reviews	oos
 how is gramercy tavern rated	restaurant_reviews	oos
 how many stars does babbo have	restaurant_reviews	oos
@@ -305,22 +314,24 @@ does z used the same plus as we do in the united states	plug_type	oos
 how many miles are my tires rated for	tire_change	oos
 is 30 usd more or less in canada	exchange_rate	oos
 how long do i have to wait to get a day off	next_holiday	oos
-turn down your speaker	change_volume	oos
 decrease your decibel level	change_volume	oos
 be more quiet	change_volume	cancel
 please lower the sound	change_volume	oos
 speak up	change_volume	oos
 not so loud	change_volume	oos
 quieter please	change_volume	cancel
+turn up the volume	change_volume	oos
 speak louder please	change_volume	oos
 louder please	change_volume	oos
 can you speak quieter	change_volume	oos
+volume 4 set	change_volume	oos
 turn up your speaker volume	change_volume	oos
 can you speak louder	change_volume	oos
 who is responsible for your employment	who_do_you_work_for	oos
 are you my insubordinate	who_do_you_work_for	oos
 does someone else control you	who_do_you_work_for	oos
 do i own you	who_do_you_work_for	oos
+do you take your orders from me	who_do_you_work_for	oos
 do i control you	who_do_you_work_for	oos
 am i in charge of you	who_do_you_work_for	oos
 is there another person that controls you	who_do_you_work_for	oos
@@ -364,7 +375,6 @@ that will be all have a nice day	goodbye	oos
 that's all i need i'm going now	goodbye	oos
 thanks for your help goodbye	goodbye	oos
 signing off	goodbye	cancel
-how do i unlock my bank account	account_blocked	oos
 are there any problems with my bank account	account_blocked	oos
 did someone who is unauthorized try to get into my bank account	account_blocked	oos
 how can i unfreeze my bank account	account_blocked	oos
@@ -372,13 +382,14 @@ reasons that us bank would place a hold on my account	account_blocked	oos
 can you help me unblock my account	account_blocked	oos
 look up the song that's on right now	what_song	oos
 what kind of music on the speaker now	what_song	oos
+are there meetings from 1 to 5 pm	meeting_schedule	oos
 is it possible i have a meeting with kim today	meeting_schedule	oos
-i need to know if i have meetings from 3 to 6 pm	meeting_schedule	oos
 what is needed to make lasagna	ingredients_list	oos
 what is needed to cook lasagna	ingredients_list	oos
 give me a recipe for tacos	ingredients_list	recipe
 tell me what's in tacos	ingredients_list	oos
 what's a good recipe foe tacos	ingredients_list	recipe
+i want to know the ingredients for making pizza	ingredients_list	oos
 what do i need to use to make lasagna	ingredients_list	oos
 how much flour do i need for a strawberry cake	ingredients_list	oos
 tell me the ingredients to make an apple pie	ingredients_list	oos
@@ -426,7 +437,6 @@ give me directions to phoenix	directions	oos
 get me directions to phoenix	directions	oos
 where is the nearest movie theater to time' square	directions	oos
 tell me how to spent frightened	spelling	spending_history
-what are you feeling today	greeting	oos
 is everything ok today	greeting	oos
 it is good to see you	greeting	oos
 will you tell me how the ai is doing	greeting	oos
@@ -436,13 +446,13 @@ tell me what your name is	what_is_your_name	oos
 what did they name you	what_is_your_name	oos
 hey how do i call your attention	what_is_your_name	oos
 what's your name anyway	what_is_your_name	oos
+tell me what to call you	what_is_your_name	oos
 can you tell me what you are called	what_is_your_name	oos
 what name do you go by	what_is_your_name	oos
 who do i have the pleasure of speaking with	what_is_your_name	oos
 who am i speaking with	what_is_your_name	oos
 what name do you go by ai	what_is_your_name	oos
 what name do you want me to use	what_is_your_name	oos
-what do you like to be called	what_is_your_name	oos
 what's the apr on my savings account	interest_rate	oos
 can i get more credit	credit_limit_change	oos
 what do you do on off days	what_are_your_hobbies	oos
@@ -454,15 +464,12 @@ i m headed out to lax and going to phl for a low price of 120 this weekend on th
 i'll leave to lax and go to phl for 120 on nov 5th	book_flight	oos
 can i fly from atlanta to san francisco for less than 100 dollars	book_flight	oos
 did i remember to put oatmeal on my list	shopping_list	oos
-iterate over the items on my grocery list	shopping_list	oos
 do i have twinkies on the grocery list	shopping_list	oos
 have i already got eggs down on the shopping list	shopping_list	oos
 recite the items i'm planning to purchase	shopping_list	oos
-what's on my purchase list	shopping_list	oos
 am i supposed to buy milk	shopping_list	oos
 is milk one of the things i need to buy	shopping_list	oos
 are carrots added to the grocery list	shopping_list	shopping_list_update
-is garlic on my grocery list	shopping_list	oos
 tell jim i'm coming home soon	text	oos
 i want to tell susan that the meeting has been cancelled	text	oos
 tell fred that i don't have his guitar	text	oos
@@ -471,6 +478,7 @@ how much do i owe visa	bill_balance	oos
 i need to know the price of my car payment and insurance please	bill_balance	oos
 what price is my credit card and my water bill at	bill_balance	oos
 how much is my water and sewer	bill_balance	oos
+how much does my water and electricity cost	bill_balance	oos
 i think all my bills are paid but can you double check	bill_balance	oos
 has my electricity bill increased this month how much	bill_balance	oos
 how expensive is my internet	bill_balance	oos
@@ -495,9 +503,9 @@ play the song called i want it that way	play_music	oos
 play the song called dancing on the ceiling	play_music	oos
 get me my slow sounds	play_music	change_speed
 pull up the songs under slow	play_music	oos
-i'm in the mood for slow songs and nothing else	play_music	oos
 the song that goes starships were meant to fly play it	play_music	oos
 play the song that goes starships were meant to fly	play_music	oos
+will you play the song that goes like starships were meant to fly	play_music	oos
 drop some beats	play_music	oos
 turn on top 20 country hits	play_music	oos
 bump some jams	play_music	oos
@@ -506,7 +514,6 @@ turn on metallicas greatest hits	play_music	oos
 put on my 90s playlist	play_music	oos
 cancel event scheduled for this afternoon	calendar_update	oos
 i need buy a birthday gift for sue taken off my calendar it is on monday or tuesday last week	calendar_update	oos
-what can i do to get rid of this event	calendar_update	oos
 what is the best way to remove this appointment	calendar_update	oos
 are you a computer generated voice	are_you_a_bot	oos
 is your voice from a human or is it synthesized	are_you_a_bot	oos
@@ -529,6 +536,7 @@ how about i call you sue	change_ai_name	oos
 your new name is joe okay	change_ai_name	oos
 you are going to be called joe now	change_ai_name	oos
 start responding to joe	change_ai_name	oos
+can i call you james instead	change_ai_name	oos
 whens your birthday	how_old_are_you	oos
 what's your bday	how_old_are_you	oos
 what is the phone number of the car rental place	car_rental	oos
@@ -546,10 +554,11 @@ how do i go about cooking a 10lb turkey	recipe	oos
 what instructions do i need to bake a cake from scratch	recipe	oos
 how do you prepare omelet	recipe	oos
 how do you prepare taco	recipe	oos
+how do you cooked eggs	recipe	oos
 show me ideas for hamburger	recipe	oos
 show me how to make tuna casserole please	recipe	oos
 recipes for garlic bread please	recipe	oos
-please tell me a recipe for this meal	recipe	oos
+please tell me a recipe for this meal	recipe	meal_suggestion
 what do i take home	income	oos
 what do i bring in over a year	income	oos
 what is my compensation	income	oos
@@ -580,15 +589,17 @@ what oil is best for chicken	oos	oil_change_how
 can you find the answer to number 26 in this algebra two textbook	oos	calculator
 how many steps have i taken today	oos	pto_used
 read text	oos	text
+may i finish washing then i give you please	oos	washer_issue
+can i deposit a check	oos	direct_deposit
 go and check the fridge	oos	fridge_issue
+i want to find a new car under 2500	oos	car_rental
+should i do a complete stop at red lights	oos	smart_home
 who invented custardo	oos	who_made_you
-why can you have the square root of a negative number	oos	calculator
 can i set up mobile deposits	oos	direct_deposit
 sell three calls of of nvda	oos	make_call
-delete the contact uncle john from my phone	oos	sync_device
+create a contact labeled mom	oos	make_call
 is there an alternate bus stop close to my home i can use	oos	directions
 i am looking for a suit for work	oos	who_do_you_work_for
-check battery health on this device	oos	jump_start
 how many voicemail messages do i have	oos	text
 can you tell me the best time to visit downtown when driving	oos	distance
 check the status of my amazon orders for me	oos	order_status
@@ -606,9 +617,9 @@ what's the safest pet to be around toddlers	oos	do_you_have_pets
 where is the closest architecture college	oos	directions
 when can i get a business card printed locally	oos	replacement_card_duration
 how many calories does doing 20 situps burn	oos	calories
+what activities can i to do outside today	oos	travel_suggestion
 what other countries speak the english language	oos	change_language
 do they speak english in australia	oos	change_language
-can you look at what the oldest age is someone can enlist in the army	oos	how_old_are_you
 what does a washing yellow light mean	oos	definition
 will the anti vaxxers die off if no one gives them vaccines	oos	vaccines
 how long does it take to call an ambulance	oos	distance
@@ -663,7 +674,6 @@ refrigerator is too warm inside	fridge_issue	oos
 milk goes bad quickly because my fridge is not cold enough	fridge_issue	oos
 my hob shows an h symbol and won't heat	oven_issue	oos
 oven shows error code f3	oven_issue	oos
-the oven fan doesn't turn on	oven_issue	oos
 can i get my oven repaired this week	oven_issue	oos
 is the repair free if my fridge is two years old	warranty_claim	oos
 i want to exchange my faulty dryer	warranty_claim	oos
