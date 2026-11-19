@@ -12,13 +12,29 @@ Domain detail changed from the scenario (allowed by the assignment): messages ar
 
 ## Setup and run
 
-Needs Python 3.11–3.13 and about 2 GB of free disk space. CPU only, no GPU needed.
+Needs **Python 3.12 or 3.13** (3.11 and 3.14 have no Windows builds of numpy/gensim at the
+pinned versions) and about 2 GB of free disk space. CPU only, no GPU needed.
+
+On Windows with Anaconda installed, this creates the right environment and starts the app
+(paste it into **Anaconda Prompt**, one block):
+
+```bat
+conda create -y -n ticket python=3.12 git
+conda activate ticket
+git clone https://github.com/faresmahmoudhafezfares-cell/ticket-router.git
+cd ticket-router
+pip install -r requirements.txt
+python download_models.py
+python app.py
+```
+
+On macOS or Linux, or with a plain Python 3.12/3.13 install:
 
 ```bash
 git clone https://github.com/faresmahmoudhafezfares-cell/ticket-router.git
 cd ticket-router
 python -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 python download_models.py          # the four trained models, ~530 MB, from the GitHub Release
 python app.py                      # opens http://127.0.0.1:7860
