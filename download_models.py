@@ -35,8 +35,13 @@ def repo_slug():
     return REPO
 
 
-def fetch(base, names, zip_name):
-    """Download one zip (given as one file, or as several parts that are joined) and unpack it."""
+def fetch(base, names, zip_name, have=None):
+    """Download one zip (given as one file, or as several parts that are joined) and unpack it.
+
+    `have` is a path that already exists when this zip has been unpacked before; it is skipped."""
+    if have and Path(have).exists():
+        print(f"{zip_name}: already in models/, skipping")
+        return
     tmp = Path(zip_name)
     with open(tmp, "wb") as out:
         for name in names:
@@ -61,11 +66,13 @@ args = ap.parse_args()
 # TICKET_ROUTER_MODELS_URL can point to a mirror of the release files.
 base = os.environ.get("TICKET_ROUTER_MODELS_URL") or f"https://github.com/{repo_slug()}/releases/download/{TAG}"
 
-fetch(base, ["ticket-router-models-1.zip"], "models-1.zip")                      # models 1, 2 and 4
+fetch(base, ["ticket-router-models-1.zip"], "models-1.zip",                      # models 1, 2 and 4
+      have="models/roberta_student_int8")
 fetch(base, ["ticket-router-models-2.zip.part0", "ticket-router-models-2.zip.part1"],
-      "models-2.zip")                                                           # model 3, in two parts
+      "models-2.zip", have="models/roberta_teacher")                            # model 3, in two parts
 if args.all:
-    fetch(base, ["ticket-router-extras.zip"], "extras.zip")                      # model 4a
+    fetch(base, ["ticket-router-extras.zip"], "extras.zip",                      # model 4a
+          have="models/roberta_student")
     if not Path("models/roberta_teacher_int8").exists():
         print("building model 3b (RoBERTa-base INT8) by quantizing model 3 ...")
         from router.models import quantize_and_save
